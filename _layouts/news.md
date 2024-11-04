@@ -1,10 +1,15 @@
 ---
-# This is the front matter for the news layout
-layout: default  # You can set this to another layout if you have one
+layout: default  # Use the default layout
 ---
 
-# {{ page.title }}  # Display the title of the news article
+<body>
 
-**Published on:** {{ page.date | date: "%B %d, %Y" }}
+    <main>
+        <h1>{{ page.title }}</h1>
+        {{ content }}  <!-- This will render the content of the individual news article -->
+    </main>
 
-{{ content }}  # This renders the main content of the article
+    <footer>
+        {% include footer.html %}  <!-- Include the theme's footer -->
+    </footer>
+</body>
